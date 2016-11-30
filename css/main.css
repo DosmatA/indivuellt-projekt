@@ -1,0 +1,421 @@
+/* ===================================
+  Base Element Styles
+====================================== */
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;                /* gör en flexbox för en sticky footer */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {                        /* for sticky footer on portfolio page */
+  flex: 1;
+}
+
+.wrapper {                        /* on the child you want to grow to fill the space (wrapper) */
+  flex: 1;
+  width: 55%;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, .84);
+}
+
+.background-image {                                    /* on my home page */
+  display: flex;
+  flex-direction: column;                              /* establishes the main axis */
+  background-image: url('../img/bgdimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+
+.flex-container  {
+  display: flex;                         /* creates a flex layout context */
+  justify-content: space-around;         /* defines how flex items are laid out along the main axis on the current line */
+  align-items: center;                   /* defines the default for how flex items are laid out along the cross axis on the current line */
+  background: none;
+  background-color: #fff;
+}
+
+a {                              /* a in class=flex-container */
+  color: #000;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.logo {
+  margin: 5px 0 0 .5em;
+}
+
+.logo-icon {
+  height: 60px;
+  width: 4em;
+}
+
+/* ******************************
+        Navigation
+****************************** */
+
+.navigation {
+  display: flex;                     /* creates a flex layout context (Parent) */
+  justify-content: space-around;
+  list-style: none;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.navigation a {                      /* flex item (Child) */
+  display: block;
+  padding: 0 10px;
+  border-bottom: 1px solid #d6b161;
+  letter-spacing: .45rem;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.navigation a:hover {
+    color: #d6b161;
+}
+
+.current {
+  color: #d6b161;    /* marks on which site you currently on */
+}
+
+/* ===================================
+  Home
+====================================== */
+
+.about p {
+  font-family: "Montserrat";
+  font-size: 30px;
+  line-height: 1.4em;
+  text-transform: none;
+  letter-spacing: .05em;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px 24px;
+}
+
+/* ===================================
+  Countdown
+====================================== */
+
+.countdown {
+  width: 55%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, .84);
+}
+
+.countdown h1 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+#clock span,
+#clock2 span{
+  float: left;
+  text-align: center;
+  font-size: 34px;
+  margin: 0 2.5%;
+  color: #fff;
+  padding: 20px;
+  width: 20%;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to left, #141E30, #243B55);
+}
+
+.units span,
+.units2 span {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-top: 30px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px rgba(10,10,10, 0.7);
+}
+
+/* ===================================
+  Portfolio
+====================================== */
+
+.banner {                                                /* banner on my portfolio page */
+  background-image: url('../img/bgdimg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+
+.banner h2 {                              /* my name on banner */
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  clear: both;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.banner span {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border: white solid 10px;
+}
+
+.education {
+  width: 50%;
+  display: inline-table;
+  margin: 100px 0 0 60px;
+  color: #000;
+  box-shadow: inset 0px 11px 8px -10px #CCC,                /* changes the shadow from an outer shadow (outset) to an inner shadow */
+        inset 0px -11px 8px -10px #CCC;
+  border: 1px  #CCC solid;
+  text-align: center;
+  cursor: pointer;
+}
+
+.work {
+  width: 50%;
+  display: inline-table;
+  margin: 20px 0 50px 60px;
+  color: #000;
+  box-shadow: inset 0px 11px 8px -10px #CCC,
+        inset 0px -11px 8px -10px #CCC;
+  border: 1px  #CCC solid;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-arrow-circle-o-down {
+  float: right;
+  margin-right: 20px;
+}
+
+/* ******************** Profile-photo ********************** */
+
+.profile-photo {
+    float: left;
+    margin: 70px 0px 70px 15em;
+    max-width: 200px;
+    border-radius: 60%;
+}
+
+/* ===================================
+  Contact Me
+====================================== */
+
+#info {
+  flex: 1;          /* on the child you want to grow to fill the space (wrapper) */
+  width: 65%;
+  margin: 50px auto;
+}
+
+h2 {
+  padding: 20px 20px;
+}
+
+.share-me {
+  margin: 0 auto;
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.7;
+  max-width: 100px;
+}
+
+#info p {
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  font: 17px 'Roboto', sans-serif;
+}
+
+.fa-envelope {
+  margin: 0 10px;
+}
+
+.phone-icon {
+  height: 17px;
+  width: 17px;
+  margin: 0 10px;
+}
+
+/* ******************** Share Me ********************** */
+#social-links {
+  background: #ab996f;
+  margin-bottom: 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#social-links a.fa:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+#social-links a.fa {
+  font-size: 30px;
+  line-height: 60px;
+  display: inline-block;
+  color: #ab996f;
+  opacity: 0.7;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 0 5px;
+  transition: opacity 0.1s;
+  overflow: hidden;                  /* overflow is clipped, and the rest of the content will be invisible */
+}
+
+
+/* ===================================
+  Footer
+====================================== */
+
+.main-footer {
+	background: #fff;
+	padding: 15px 0;
+  text-align: center;
+  clear: both;
+  border-top: 1px solid #ccc;
+  color: #ccc;
+}
+
+.social-icon {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding-top: 3px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  padding: 10px 15px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media all and (max-width: 990px) {
+  .flex-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo {
+  margin: 0;
+  }
+
+  .navigation  {
+    width: 85%;
+    justify-content: space-around;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+
+  .countdown {
+    width: 70%;
+  }
+
+  .profile-photo {
+      display: block;
+      float: none;
+      margin: 20px auto;
+  }
+
+  .education,
+  .work   {
+    width: 70%;
+    text-align: center;
+    display: block;
+    margin: 40px auto;
+  }
+
+  .banner {
+    height: 400px;
+  }
+}
+
+/* *******************  ******************* */
+@media all and (max-width: 600px) {
+  .flex-container {
+    flex-flow: column wrap;
+  }
+
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  .countdown {
+    width: 90%;
+  }
+
+  #info {
+    width: 90%;
+  }
+
+  #clock span,
+  #clock2 span{
+    padding: 5px;
+  }
+
+  .units span,
+  .units2 span {
+    font-size: 12px;
+  }
+
+  .banner {
+    height: 600px;
+  }
+
+  .education,
+  .work  {
+    width: 90%;
+  }
+
+  #social-links p {
+    width: 100%;
+    text-align: center;
+  }
+
+}
